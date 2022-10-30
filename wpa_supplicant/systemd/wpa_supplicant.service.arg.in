@@ -9,7 +9,7 @@ Wants=network.target
 
 [Service]
 Type=simple
-ExecStart=@BINDIR@/wpa_supplicant -c/etc/wpa_supplicant/wpa_supplicant-%I.conf -i%I
+ExecStart=@BINDIR@/wpa_supplicant -f /var/log/wpa_supplicant.log -ddd  -c/etc/wpa_supplicant/wpa_supplicant-%I.conf -i%I
 ExecReload=/bin/kill -HUP $MAINPID
 
 [Install]

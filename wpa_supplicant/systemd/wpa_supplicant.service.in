@@ -8,7 +8,7 @@ IgnoreOnIsolate=true
 [Service]
 Type=dbus
 BusName=fi.w1.wpa_supplicant1
-ExecStart=@BINDIR@/wpa_supplicant -u -s -O /run/wpa_supplicant
+ExecStart=@BINDIR@/wpa_supplicant -f /var/log/wpa_supplicant.log -ddd -u -s -O /run/wpa_supplicant
 ExecReload=/bin/kill -HUP $MAINPID
 
 [Install]
